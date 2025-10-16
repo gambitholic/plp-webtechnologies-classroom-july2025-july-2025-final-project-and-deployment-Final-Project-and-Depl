@@ -338,3 +338,116 @@ footer p:nth-child(2) {
   bottom: 35px;
   font-size: 14px;
 }
+
+/* ======================================= */
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+/* ======================================= */
+
+/* General adjustments for tablets and large mobiles (screens <= 1200px) */
+@media screen and (max-width: 1200px) {
+  /* Adjust main content padding and width */
+  .main {
+    flex-direction: column; /* Stack image and text in About section */
+    text-align: center;
+  }
+
+  .about img {
+    width: 80%; /* Scale image down */
+    max-width: 400px; /* Keep it from getting too big */
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    width: 90%; /* Allow text to use more width */
+    padding: 0 20px;
+  }
+
+  .box {
+    /* Allow cards to wrap sooner */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* Specific adjustments for standard mobile devices (screens <= 768px) */
+@media screen and (max-width: 768px) {
+  /* 1. HERO SECTION & NAVIGATION */
+  nav ul {
+    display: none; /* 💥 Hide desktop navigation links on mobile 💥 */
+  }
+
+  .btn {
+    padding: 8px 15px; /* Smaller subscribe button */
+  }
+
+  .content {
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the hero text block */
+    width: 90%;
+    text-align: center;
+    padding-top: 150px; /* Push content down past nav bar */
+  }
+
+  h1 {
+    font-size: 50px; /* Reduce large heading size */
+  }
+
+  .newsletter form {
+    width: 100%; /* Form takes full width of .content container */
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .newsletter form input:first-child {
+    padding: 14px 110px 14px 15px; /* Adjust padding for smaller button */
+  }
+
+  .newsletter form input:last-child {
+    padding: 10px 20px; /* Smaller button */
+    right: 4px;
+    top: 4px;
+  }
+
+  /* 2. ABOUT SECTION */
+  .about-text h2,
+  .title h2 {
+    font-size: 45px; /* Reduce title size */
+  }
+
+  .about-text {
+    padding: 0 10px;
+  }
+
+  /* 3. SERVICE SECTION */
+  .title h2 {
+    width: auto; /* Remove fixed width */
+    margin: 20px auto;
+  }
+
+  .card {
+    width: 90%; /* 💥 Force cards to take up near-full width 💥 */
+    max-width: 350px; /* Prevent it from stretching too far */
+    margin: 10px auto; /* Center the cards and ensure vertical spacing */
+  }
+
+  /* 4. FOOTER */
+  footer p:nth-child(2) {
+    width: 90%; /* Allow description text to use full width */
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  footer {
+    height: 350px; /* Reduce footer height */
+  }
+
+  .contact-me p {
+    font-size: 24px; /* Adjust contact me text size */
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .end {
+    bottom: 20px; /* Adjust copyright position */
+  }
+}
